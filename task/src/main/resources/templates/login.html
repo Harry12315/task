@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+<link th:href="@{bootstrap/bootstrap.min.css}" rel="stylesheet">
+<script th:src="@{/bootstrap/bootstrap.min.js}"></script>
+
+<title>login</title>
+<style>
+	body{ text-align:center}
+	.form-group{margin:200px auto;width:300px;height:100px}
+</style>
+</head>
+<body>
+
+<div class="form-group">
+	<label for="username">Username</label>
+	<input type="text" class="form-control" id="username" placeholder="Username">
+	<br/>
+	<br/>
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password">
+    <br/>
+    <br/>
+    <button style="width:100px; margin-right:95px" type="button" class="btn btn-success" onclick="location='/preregister'">register</button>
+    <button style="width:100px" type="button" class="btn btn-info" onclick="login()">login</button>
+</div>
+</body>
+<script th:src="@{/js/login.js}"></script>
+<script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+</html>

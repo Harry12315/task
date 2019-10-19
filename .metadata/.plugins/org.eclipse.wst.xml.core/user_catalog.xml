@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://www.thymeleaf.org/extras/dialect" uri="file:///C:/Users/24044/Desktop/thymeleaf-extras-dialect-2.1.xsd"/>
+</catalog>
