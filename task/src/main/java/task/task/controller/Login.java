@@ -1,5 +1,8 @@
 package task.task.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +27,11 @@ public class Login {
 	}
 
 	@PostMapping("/login")
-	public String login(LoginRequestBean bean) {
+	public String login(LoginRequestBean bean,HttpServletRequest request,HttpServletResponse response) {
+		if(request.getHeader("x-requested-with")!=null&&
+		request.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest")){
+			response.setHeader("sessionstatus","timeout");
+		}
 		String username = bean.getUsername();
 		String password = bean.getPassword();
 		if(user.checkUser(username, password)==null) {

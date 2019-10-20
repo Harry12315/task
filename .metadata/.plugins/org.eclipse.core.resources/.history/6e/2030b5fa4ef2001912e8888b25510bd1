@@ -1,0 +1,6 @@
+package task.task.model;
+
+public class TokenDetail {
+
+	String getUsername();
+}

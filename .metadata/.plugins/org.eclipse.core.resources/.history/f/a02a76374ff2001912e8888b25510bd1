@@ -1,0 +1,19 @@
+package task.task.model;
+
+public class UserDetailImpl implements TokenDetail {
+
+	@Override
+	public String getUsername() {
+	    private final String username;
+
+	    public TokenDetailImpl(String username) {
+	        this.username = username;
+	    }
+
+	    @Override
+	    public String getUsername() {
+	        return this.username;
+	    }
+	}
+
+}
